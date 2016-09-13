@@ -1,0 +1,30 @@
+
+import pandas 
+import numpy
+import seaborn
+import matplotlib.pyplot as plt
+import pandas.io.sql as psql
+
+
+>>> x = data[['MAR12ABDEP', 'MARP12ABDEP', 'HER12ABDEP', 'HERP12ABDEP','OTHB12ABDEP', 
+... 'OTHBP12ABDEP']]
+
+
+ MAR12ABDEP  MARP12ABDEP  HER12ABDEP  HERP12ABDEP  OTHB12ABDEP  \
+0            0            0           0            0            0   
+1            0            0           0            0            0   
+2            0            0           0            0            0   
+3            0            0           0            0            0   
+
+    OTHBP12ABDEP  
+0              0  
+1              0  
+2              0  
+3              0  
+>>> plt.figure(figsize=(12,10))
+>>> plt.ylim(0, 275)
+>>> sns.swarmplot(x="Stat", y="value", data=pkmn, hue="Type 1", split=True, size=7)
+>>>
+plt.legend(bbox_to_anchor=(1, 1), loc=2, borderaxespad=0.);
+plt.title('Employment rate and estimated HIV contains data for all 192 UN members')
+<matplotlib.text.Text object at 0x10b3e7a90>
