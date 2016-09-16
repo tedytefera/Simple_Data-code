@@ -1,0 +1,61 @@
+import urllib2
+import sqlite3
+import json
+import BeautifulSoup *
+
+data = ("/Users/Teddy/Downloads/nesarc_pds.csv")
+
+print len(data)
+print len(data.columns)
+
+>>> print m1
+                              country  lifeexpectancy  employrate
+                              
+0                         Afghanistan       48.673000   55.700001
+1                             Albania       76.918000   51.400002
+2                             Algeria       73.131000   50.500000
+3                             Andorra             nan         nan
+4                              Angola       51.093000   75.699997
+5                 Antigua and Barbuda             nan         nan
+6                           Argentina       75.901000   58.400002
+7                             Armenia       74.241000   40.099998
+8                               Aruba       75.246000         nan
+9                           Australia       81.907000   61.500000
+10                            Austria       80.854000   57.099998   
+
+53                     Dominican Rep.       73.396000   52.700001
+54                            Ecuador       75.632000   59.700001
+55                              Egypt       73.235000   42.400002
+56                        El Salvador       72.196000   58.200001
+57                  Equatorial Guinea       51.088000   61.700001
+58                            Eritrea       61.597000   64.900002
+59                            Estonia       74.825000   56.500000
+60                           Ethiopia       59.274000   80.699997
+61                     Faeroe Islands             nan         nan
+
+200                           Ukraine       68.494000   54.400002
+201              United Arab Emirates       76.546000   75.199997
+202                    United Kingdom       80.170000   59.299999
+203                     United States       78.531000   62.299999
+204                           Uruguay       77.005000   57.500000
+205                        Uzbekistan       68.287000   57.500000    
+
+> print q1  
+0        nan
+1        nan
+2   0.100000
+3        nan
+4   2.000000
+5        nan
+6   0.500000
+7   0.100000
+8        nan
+9   0.100000
+Name: hivrate, dtype: float64
+
+>>> print %%%%
+1=25th%tile    48
+2=50%tile      48
+3=75%tile      47
+4=100%tile     48
+Name: lifeexpectancy, dtype: int64
