@@ -1,3 +1,25 @@
+
+Rlove <- functaion (R) {
+	rlove1<-NULL
+	rlove2<-NULL
+	mg<-NULL
+	    for (i in 1:length(id)) {
+	   rlove1[[i]] <- c(pastedR, "/...csv", formatC(R[i]))
+	   rlove2[[i]] <- c(read.csv(data[[i]])
+	   s[i] <- sum(.cases(rlove2[[i]]))
+	   mg <- data.frame(cbind(id, nobs=s[i]))
+	      }
+	   mg
+}
+
+
+
+
+
+
+
+
+
 summary(virginica)
   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
  Min.   :4.900   Min.   :2.200   Min.   :4.500   Min.   :1.400   setosa    : 0  
