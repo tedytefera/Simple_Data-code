@@ -1,38 +1,5 @@
 
-Rlove <- functaion (R) {
-	rlove1<-NULL
-	rlove2<-NULL
-	mg<-NULL
-	    for (i in 1:length(id)) {
-	   rlove1[[i]] <- c(pastedR, "/...csv", formatC(R[i]))
-	   rlove2[[i]] <- c(read.csv(data[[i]])
-	   s[i] <- sum(.cases(rlove2[[i]]))
-	   mg <- data.frame(cbind(id, nobs=s[i]))
-	      }
-	   mg
-}
 
-summary(virginica)
-  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
- Min.   :4.900   Min.   :2.200   Min.   :4.500   Min.   :1.400   setosa    : 0  
- 1st Qu.:6.225   1st Qu.:2.800   1st Qu.:5.100   1st Qu.:1.800   versicolor: 0  
- Median :6.500   Median :3.000   Median :5.550   Median :2.000   virginica :50  
- Mean   :6.588   Mean   :2.974   Mean   :5.552   Mean   :2.026                  
- 3rd Qu.:6.900   3rd Qu.:3.175   3rd Qu.:5.875   3rd Qu.:2.300                  
- Max.   :7.900   Max.   :3.800   Max.   :6.900   Max.   :2.500   
-              ===============================#########==================================
- Rlove <- functaion (R) {
-	rlove1<-NULL
-	rlove2<-NULL
-	mg<-NULL
-	    for (i in 1:length(id)) {
-	   rlove1[[i]] <- c(pastedR, "/...csv", formatC(R[i]))
-	   rlove2[[i]] <- c(read.csv(data[[i]])
-	   s[i] <- sum(.cases(rlove2[[i]]))
-	   mg <- data.frame(cbind(id, nobs=s[i]))
-	      }
-	   mg
-}
  
  The first function, makeVector creates a special "vector", which is really a list containing a function to
 
@@ -54,6 +21,9 @@ summary(virginica)
 +              setmean = setmean,
 +              getmean = getmean)
 + }
+##the value of inverse matrix retrieved is not Null, then the same value is returned as the final value of 
+the inverse of the matrix along with a message "getting cached data###
+
 The following function calculates the mean of the special "vector" created with the above function. 
 However, it first checks to see if the mean has already been calculated. If so, it gets the mean from 
 the cache and skips the computation. Otherwise, it calculates the mean of the data and sets the value of 
@@ -99,3 +69,5 @@ function(x, ...) {
         m
 }
 > 
+###function sets the value of the inverse for that particular matrix in the relevant 
+makeCacheMatrix object for future caching if required 
