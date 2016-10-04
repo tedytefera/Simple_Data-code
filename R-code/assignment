@@ -12,14 +12,6 @@ Rlove <- functaion (R) {
 	   mg
 }
 
-
-
-
-
-
-
-
-
 summary(virginica)
   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
  Min.   :4.900   Min.   :2.200   Min.   :4.500   Min.   :1.400   setosa    : 0  
