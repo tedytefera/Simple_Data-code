@@ -1,0 +1,74 @@
+summary(virginica)
+  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
+ Min.   :4.900   Min.   :2.200   Min.   :4.500   Min.   :1.400   setosa    : 0  
+ 1st Qu.:6.225   1st Qu.:2.800   1st Qu.:5.100   1st Qu.:1.800   versicolor: 0  
+ Median :6.500   Median :3.000   Median :5.550   Median :2.000   virginica :50  
+ Mean   :6.588   Mean   :2.974   Mean   :5.552   Mean   :2.026                  
+ 3rd Qu.:6.900   3rd Qu.:3.175   3rd Qu.:5.875   3rd Qu.:2.300                  
+ Max.   :7.900   Max.   :3.800   Max.   :6.900   Max.   :2.500    
+ 
+ The first function, makeVector creates a special "vector", which is really a list containing a function to
+
+1 = set the value of the vector
+2 = get the value of the vector
+3 = set the value of the mean
+4 = get the value of the mean
+
+> makeVector <- function(x = numeric()) {
++         m <- NULL
++         set <- function(y) {
++                 x <<- y
++                 m <<- NULL
++         }
++         get <- function() x
++         setmean <- function(mean) m <<- mean
++         getmean <- function() m
++         list(set = set, get = get,
++              setmean = setmean,
++              getmean = getmean)
++ }
+The following function calculates the mean of the special "vector" created with the above function. 
+However, it first checks to see if the mean has already been calculated. If so, it gets the mean from 
+the cache and skips the computation. Otherwise, it calculates the mean of the data and sets the value of 
+the mean in the cache via the setmean function.
+
+> cachemean <- function(x, ...) {
++         m <- x$getmean()
++         if(!is.null(m)) {
++                 message("getting cached data")
++                 return(m)
++         }
++         data <- x$get()
++         m <- mean(data, ...)
++         x$setmean(m)
++         m
++ }
+> makevector
+Error: object 'makevector' not found
+> makeVector
+function(x = numeric()) {
+        m <- NULL
+        set <- function(y) {
+                x <<- y
+                m <<- NULL
+        }
+        get <- function() x
+        setmean <- function(mean) m <<- mean
+        getmean <- function() m
+        list(set = set, get = get,
+             setmean = setmean,
+             getmean = getmean)
+}
+> cachemean
+function(x, ...) {
+        m <- x$getmean()
+        if(!is.null(m)) {
+                message("getting cached data")
+                return(m)
+        }
+        data <- x$get()
+        m <- mean(data, ...)
+        x$setmean(m)
+        m
+}
+> 
