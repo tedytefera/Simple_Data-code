@@ -19,7 +19,20 @@ summary(virginica)
  Median :6.500   Median :3.000   Median :5.550   Median :2.000   virginica :50  
  Mean   :6.588   Mean   :2.974   Mean   :5.552   Mean   :2.026                  
  3rd Qu.:6.900   3rd Qu.:3.175   3rd Qu.:5.875   3rd Qu.:2.300                  
- Max.   :7.900   Max.   :3.800   Max.   :6.900   Max.   :2.500    
+ Max.   :7.900   Max.   :3.800   Max.   :6.900   Max.   :2.500   
+              ===============================#########==================================
+ Rlove <- functaion (R) {
+	rlove1<-NULL
+	rlove2<-NULL
+	mg<-NULL
+	    for (i in 1:length(id)) {
+	   rlove1[[i]] <- c(pastedR, "/...csv", formatC(R[i]))
+	   rlove2[[i]] <- c(read.csv(data[[i]])
+	   s[i] <- sum(.cases(rlove2[[i]]))
+	   mg <- data.frame(cbind(id, nobs=s[i]))
+	      }
+	   mg
+}
  
  The first function, makeVector creates a special "vector", which is really a list containing a function to
 
