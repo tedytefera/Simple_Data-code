@@ -1,0 +1,198 @@
+Sqlite3
+>>> import sqlite3
+
+>>> import json
+
+>>> import matplotlib.pyplot as plt
+
+>>> import searborn
+
+>>> import seaborn
+
+>>> import numpy
+
+>>> import pandas
+
+>>> import pandas as pd
+
+>>> import numpy as np
+
+>>>
+
+>>> lovel = p.imread(“/Users/Teddy/Desktop/A2017enroll.png”)
+
+>>> plt.imshow(lovel)
+
+<matplotlib.image.AxesImage object at 0x113a01510>
+
+>>> plt.show()
+
+>>>
+
+>>>
+
+>>> lovel.sum()
+
+2609020.5
+
+>>> lovel.mean()
+
+0.74444073
+
+>>> lovel
+
+array([[[ 0.,  0.,  0.,  0.],
+
+       [ 0.,  0.,  0.,  0.],
+
+       [ 0.,  0.,  0.,  0.],
+
+       …,
+
+       [ 0.,  0.,  0.,  0.],
+
+       [ 0.,  0.,  0.,  0.],
+
+       [ 0.,  0.,  0.,  0.]]], dtype=float32)
+
+>>> love.index()
+
+Traceback (most recent call last):
+
+ File “<stdin>”, line 1, in <module>
+
+NameError: name ‘love’ is not defined
+
+>>> lovel.index()
+
+Traceback (most recent call last):
+
+ File “<stdin>”, line 1, in <module>
+
+AttributeError: 'numpy.ndarray’ object has no attribute 'index’
+
+>>> lovel.values
+
+Traceback (most recent call last):
+
+ File “<stdin>”, line 1, in <module>
+
+AttributeError: 'numpy.ndarray’ object has no attribute 'values’
+
+>>> lovel.columns
+
+Traceback (most recent call last):
+
+ File “<stdin>”, line 1, in <module>
+
+AttributeError: 'numpy.ndarray’ object has no attribute 'columns’
+
+
+
+>>> conn = sqlite3.connect(“my2.sqlite”)
+
+>>> cur = conn.cursor()
+
+>>>
+
+>>> cur.execute(“’
+
+… Drop table if exists counts”’)
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+>>> cur.execute(“’
+
+… Create table count(name Text, count Integer)”’)
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+>>>
+
+
+
+>>> fname = raw_input(“Enter: ”)
+
+Enter: /Users/Teddy/Documents/plain.text
+
+>>>
+
+>>> fh = open(fname)
+
+>>>
+
+>>> for line in fh:
+
+…     if not line.startswith(“From: ”) : continue
+
+…     p = line.split()
+
+…     name = p[1]
+
+…     print name
+
+…     cur.execute(“'Insert or Ignore into counts (name, count)
+
+…                 values(?,1 )”’, (name, ))
+
+…     conn.commit()
+
+…
+
+stephen.marquard@uct.ac.za
+
+Traceback (most recent call last):
+
+ File “<stdin>”, line 7, in <module>
+
+sqlite3.OperationalError: no such table: counts
+
+>>> for line in fh:
+
+…     p = line.split()
+
+…     name = p[1]
+
+…     print name
+
+…     cur.execute(“'insert or ignore into count (name, count)
+
+…                 values(?, 1)”’, (name, ))
+
+…     conn.commit()
+
+…
+
+lo@media.berkeley.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+zq@umich.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+rjl@iupui.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+zqi@umich.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+rjl@iupui.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+cw@iupui.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+cwe@iupui.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+gsilv@umich.edu
+
+<sqlite3.Cursor object at 0x10d91e810>
+
+gsir@umich.edu
