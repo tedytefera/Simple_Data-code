@@ -1,0 +1,42 @@
+
+#  MACHINE Learnint with Python 
+
+import numpy
+
+import numpy as np
+from scipy import sparse
+import matplotlib.pyplot as plt
+
+l = np.eye(5)
+l
+m = sparse.csr_matrix(l)
+print m
+
+data = np.ones(4)
+print data
+row = np.arange(4)
+col = np.arange(4)
+
+c = sparse.coo_matrix((data, (row, col)))
+
+x = np.linspace(-10,10,100)
+y = np.sin(x)
+
+plt.plot(x, y, marker='x')
+
+plt.show()
+
+
+print map(None, [1,2,3], [2,3,4,5])
+print map(None, 'abc', 'xyz123')
+
+
+
+Tewodross-MacBook-Air:~ Teddy$ python mm.py
+  (0, 0)	1.0
+  (1, 1)	1.0
+  (2, 2)	1.0
+  (3, 3)	1.0
+  (4, 4)	1.0
+[ 1.  1.  1.  1.]
+    
