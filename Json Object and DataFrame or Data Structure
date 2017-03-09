@@ -1,0 +1,37 @@
+obj = """
+{"name": "Teddy",
+ "places_lived": ["United States", "Addis", "Heaven"],
+ "pet": null,
+ "Siblings": [{"name": "Gacho", "age": 45, "pet": "No"},
+              {"name": "Eyol",  "age": 28, "pet": "yas"},
+              {"name": "Mathius", "age": 26, "pet": "No"},
+              {"name": "Sorfale", "age": 24, "pet": "No"}]}
+              
+              
+"""
+
+
+
+import json
+import urllib2
+import sqlite3
+from pandas import DataFrame
+
+print "============Json Loads=================="
+
+res = json.loads(obj)
+
+print res
+
+print "============= Json Dumps================"
+
+jsonObject = json.dumps(res)
+
+print jsonObject
+
+
+print "========= Json Object or List Object to DataFrame or Data Structure============"
+
+s = DataFrame(res['Siblings'], columns = ['name', 'age', 'pet'])
+
+print s
