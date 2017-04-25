@@ -1,0 +1,31 @@
+import webbrowser
+import random
+
+prob = input("how can I help?")
+
+def yes_no():
+    b = input("Has the solution worked?")
+    if b == "yes":
+       print ("Goodbye")
+       time.sleep(2)
+    if b == "no":
+       rand = random.randint(10,10000)
+       print ("contact supplier -", rand)
+
+
+if "brok" in prob:
+    f = open("/Users/Teddy/Downloads/tryfind.txt", 'r')
+    sol = f.readlines()
+    print (sol[1])
+    yes_no()
+    
+elif "slow" in prob or "sluggish" in prob:
+    f = open("/Users/Teddy/Downloads/Solutions.text", "r")
+    sol = f.readlines()
+    print (sol[1])
+    f.close()
+    yes_no()
+else:
+    print ("Now we can directly search on google")
+    google = input("Google search:")
+    google = input ("https://www.google.com/")
